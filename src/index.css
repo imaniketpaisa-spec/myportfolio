@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-gaming: "Orbitron", sans-serif;
+  --font-pixel: "Press Start 2P", system-ui;
+  --color-blue-start: #00B4D8;
+  --color-blue-mid: #90E0EF;
+  --color-blue-end: #CAF0F8;
+  --color-charcoal: #1A1A1A;
+  --color-soft-gray: #555555;
+  --color-ice: #F0F9FF;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap');
+
+  body {
+    @apply bg-ice text-soft-gray font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-charcoal;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-blue-start) 0%, var(--color-blue-mid) 50%, var(--color-blue-end) 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pop-pattern {
+  background-image: radial-gradient(#000 10%, transparent 10%);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbar for horizontal projects */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
